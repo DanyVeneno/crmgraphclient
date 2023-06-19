@@ -27,8 +27,10 @@ const Index = () => {
   // console.log(error)
 
   if (loading) return "Cargando....";
-
-  if (!data.obtenerClientesVendedor) {
+  //if (!data.obtenerClientesVendedor) {
+  //return router.push("/login");
+  //}
+  if (!data || !data.obtenerClientesVendedor) {
     return router.push("/login");
   }
 
